@@ -1,3 +1,5 @@
 library(tidyverse)
 rawdata <- read_csv("data/betriebsdaten.csv")
 view(rawdata)
+vergleich <- rawdata |> filter(maschine %in% c("M1", "M3"))
+t.test(masse_mm ~ maschine, data = vergleich)

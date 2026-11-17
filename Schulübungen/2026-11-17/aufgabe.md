@@ -53,16 +53,16 @@ vergleich <- daten |> filter(maschine %in% c("M1", "M3"))
 t.test(masse_mm ~ maschine, data = vergleich)
 ```
 
-- t-Wert: ca. −5,1 &nbsp; Freiheitsgrade: ____________
-- p-Wert: < 0,0001
-- 95-%-Konfidenzintervall der Differenz: ____________________
+- t-Wert: ca. −5,1 &nbsp; Freiheitsgrade:55.272
+- p-Wert: 4.092e-06
+- 95-%-Konfidenzintervall der Differenz: -0.08658875 -0.03783017
 
 **Lies das Intervall in ganzen Sätzen.** M3 liegt um wie viele mm
 *mindestens* über M1 — und um wie viele mm *höchstens*? Vergleiche mit der
 Toleranz von ± 0,15 mm: Passt der gesamte Intervall in die Toleranz, oder
 ragt er hinaus?
 
-_________________________________________________
+M3 liegt mindestens ca. 0,04 mm und höchstens ca. 0,09 mm über M1. Das ganze Intervall liegt innerhalb der Toleranz von ± 0,15 mm.
 
 ---
 
@@ -80,8 +80,8 @@ chargen <- daten |>
 chargen$M3 - chargen$M1
 ```
 
-**a)** Wie viele der 10 Differenzen sind positiv? ____________
-Wie viele sind negativ? ____________
+**a)** Wie viele der 10 Differenzen sind positiv? alle sind positiv
+Wie viele sind negativ? 0
 
 **b)**
 
@@ -89,13 +89,13 @@ Wie viele sind negativ? ____________
 t.test(chargen$M3, chargen$M1, paired = TRUE)
 ```
 
-- t-Wert: ____________ &nbsp; Freiheitsgrade: ____________
-- p-Wert: ____________
+- t-Wert: 5.9822 &nbsp; Freiheitsgrade: 9
+- p-Wert: 0.000207
 
 **c)** Warum hat der gepaarte Test hier **9** Freiheitsgrade, obwohl
 er mit den Daten von 37 bzw. 40 Messungen arbeitet? (2 Sätze)
 
-_________________________________________________
+Der gepaarte Test rechnet nur mit den 10 Chargen-Differenzen, nicht mit den einzelnen Messungen. Daher gilt df = n − 1 = 9.
 
 **d)** Rechne den t-Wert von Hand nach — einmal über die **Differenzen**,
 einmal über die **Messwerte** mit den Mittelwerten aus Aufgabe 1:
