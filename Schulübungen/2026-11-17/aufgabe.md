@@ -106,7 +106,7 @@ einmal über die **Messwerte** mit den Mittelwerten aus Aufgabe 1:
 Welcher Wert stimmt mit R überein, und was lernst du daraus über die
 gepaarte Formel?
 
-_________________________________________________
+o	Die gepaarte Formel nutzt nur die Streuung der Differenzen, nicht die der Rohwerte, und ist deshalb bei zusammengehörigen Werten empfindlicher.
 
 ---
 
