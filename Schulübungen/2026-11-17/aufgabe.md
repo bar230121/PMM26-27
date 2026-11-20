@@ -80,8 +80,7 @@ chargen <- daten |>
 chargen$M3 - chargen$M1
 ```
 
-**a)** Wie viele der 10 Differenzen sind positiv? alle sind positiv
-Wie viele sind negativ? 10 positiv 0 negativ
+**a)** Wie viele der 10 Differenzen sind positiv? Wie viele sind negativ? 10 positiv 0 negativ
 
 **b)**
 
